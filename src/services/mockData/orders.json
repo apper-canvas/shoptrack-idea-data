@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 1,
+        "priceAtAdd": 1299.99
+      },
+      {
+        "productId": 11,
+        "quantity": 1,
+        "priceAtAdd": 349.99
+      }
+    ],
+    "totalAmount": 1649.98,
+    "status": "completed",
+    "createdAt": "2024-01-20T14:30:00Z",
+    "completedAt": "2024-01-21T10:15:00Z"
+  },
+  {
+    "Id": 2,
+    "items": [
+      {
+        "productId": 6,
+        "quantity": 2,
+        "priceAtAdd": 149.99
+      }
+    ],
+    "totalAmount": 299.98,
+    "status": "processing",
+    "createdAt": "2024-01-21T09:20:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 3,
+    "items": [
+      {
+        "productId": 9,
+        "quantity": 3,
+        "priceAtAdd": 49.99
+      },
+      {
+        "productId": 10,
+        "quantity": 1,
+        "priceAtAdd": 299.99
+      }
+    ],
+    "totalAmount": 449.96,
+    "status": "pending",
+    "createdAt": "2024-01-21T16:45:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 4,
+    "items": [
+      {
+        "productId": 4,
+        "quantity": 1,
+        "priceAtAdd": 179.99
+      }
+    ],
+    "totalAmount": 179.99,
+    "status": "completed",
+    "createdAt": "2024-01-19T11:00:00Z",
+    "completedAt": "2024-01-20T08:30:00Z"
+  },
+  {
+    "Id": 5,
+    "items": [
+      {
+        "productId": 8,
+        "quantity": 1,
+        "priceAtAdd": 799.99
+      }
+    ],
+    "totalAmount": 799.99,
+    "status": "cancelled",
+    "createdAt": "2024-01-18T13:20:00Z",
+    "completedAt": null
+  }
+]
