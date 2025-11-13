@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Header from "@/components/organisms/Header";
+import React, { useEffect, useState } from "react";
 import CartSidebar from "@/components/organisms/CartSidebar";
+import Header from "@/components/organisms/Header";
 import productService from "@/services/api/productService";
 
 const Layout = () => {
@@ -12,9 +12,12 @@ const Layout = () => {
     const saved = localStorage.getItem("cart");
     return saved ? JSON.parse(saved) : [];
   });
-  const [products, setProducts] = useState([]);
+const [products, setProducts] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
-
+  const [currentUser, setCurrentUser] = useState(() => {
+    const saved = localStorage.getItem("currentUser");
+    return saved ? JSON.parse(saved) : null;
+  });
   useEffect(() => {
     localStorage.setItem("viewMode", viewMode);
   }, [viewMode]);
@@ -75,10 +78,10 @@ const Layout = () => {
         viewMode={viewMode}
         setViewMode={setViewMode}
         cartItemCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
-      />
+/>
       
       <main className="container mx-auto px-4 py-8">
-        <Outlet context={{ viewMode, cartItems, addToCart, updateCartQuantity, removeFromCart, clearCart, products, setCartOpen }} />
+        <Outlet context={{ viewMode, cartItems, addToCart, updateCartQuantity, removeFromCart, clearCart, products, setCartOpen, currentUser, setCurrentUser }} />
       </main>
 
       <CartSidebar
